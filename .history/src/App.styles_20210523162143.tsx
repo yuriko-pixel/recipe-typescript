@@ -29,34 +29,17 @@ export const Searchimg = styled.img`
     width: 25px;
     position: absolute;
     left: 380px;
-    top: 10px;
+    bottom: 15px;
 `;
 
 export const SearchWrapper = styled.form`
     position: relative;
-    height: 100px;
-    width: 450px;
+    height: 50px;
+    width: 400px;
     margin: 5px auto;
 `;
 
 export const AddIngreButton = styled.button`
-    top: 50px;
-    left: 230px;
     position: absolute;
-    font-size: 15px;
-    background: transparent;
-    border: transparent;
-    color: #003f8e;
-    &:hover {
-        cursor: pointer;
-    }
-`;
-
-export const IngredientsSearch = styled.input`
-    position: absolute;
-    top: 50px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    height: 20px;
-    padding: 0 10px;
+    
 `;

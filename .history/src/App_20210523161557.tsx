@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import RandomRecipe from './components/RandomRecipe'  
+import React, { useState, useEffect } from 'react';
+import RandomRecipe, {getRandomRecipe, Recipe} from './components/RandomRecipe'  
 import Navbar from './components/Navbar'
 import Top from './components/Top'
 import {Wrapper} from './components/Recipe.style'
-import {AppStyles,RecipeWrapper,Searchbar,Searchimg,SearchWrapper,AddIngreButton,IngredientsSearch} from './App.styles'
+import RecipeCard from './components/RecipeCard'
+import {AppStyles,RecipeWrapper,Searchbar,Searchimg,SearchWrapper} from './App.styles'
 import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
@@ -18,9 +19,7 @@ function App() {
     e.preventDefault();
     console.log(window.location.href);
     window.location.href += "searchrecipe/" + search.trim();
-  }
-
-  const ingredientsButton = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    // window.location.href = location.href + "/searchResult/" + search.trim();
 
   }
 
@@ -33,8 +32,7 @@ function App() {
         <SearchWrapper onSubmit={submitSearch}>
           <Searchbar type="text" placeholder="Type cusine name..." value={search} onChange={getSearch}/>
           <button><Searchimg src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" /></button>
-          <AddIngreButton onClick={ingredientsButton}>+ Add ingredients keywords</AddIngreButton>
-          <IngredientsSearch type="text" placeholder="Type ingredients..." value={search} onChange={getSearch}/>
+          <button>+ Add ingredients keywords</button>
         </SearchWrapper>
         {/* recipe varieties */}
           <RecipeWrapper>
@@ -42,7 +40,7 @@ function App() {
           </RecipeWrapper>
           </Wrapper>
       </AppStyles>
-      <Route exact path='/searchrecipe/:cusine' />
+      <Route exact path='/searchrecipe/:cusine' component={EachMemo}/>
       </BrowserRouter>
   );
 }

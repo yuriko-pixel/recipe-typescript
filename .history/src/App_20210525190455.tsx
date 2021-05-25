@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RandomRecipe from './components/RandomRecipe'  
+import RandomRecip from './components/RandomRecipe'  
 import Navbar from './components/Navbar'
 import Top from './components/Top'
 import {Wrapper} from './components/Recipe.style'

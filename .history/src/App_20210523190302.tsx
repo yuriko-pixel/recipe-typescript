@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import RandomRecipe from './components/RandomRecipe'  
+import React, { useState, useEffect } from 'react';
+import RandomRecipe, {getRandomRecipe, Recipe} from './components/RandomRecipe'  
 import Navbar from './components/Navbar'
 import Top from './components/Top'
 import {Wrapper} from './components/Recipe.style'
+import RecipeCard from './components/RecipeCard'
 import {AppStyles,RecipeWrapper,Searchbar,Searchimg,SearchWrapper,AddIngreButton,IngredientsSearch} from './App.styles'
 import { BrowserRouter, Route } from 'react-router-dom';
 

@@ -44,19 +44,4 @@ export const AddIngreButton = styled.button`
     left: 230px;
     position: absolute;
     font-size: 15px;
-    background: transparent;
-    border: transparent;
-    color: #003f8e;
-    &:hover {
-        cursor: pointer;
-    }
-`;
-
-export const IngredientsSearch = styled.input`
-    position: absolute;
-    top: 50px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    height: 20px;
-    padding: 0 10px;
 `;

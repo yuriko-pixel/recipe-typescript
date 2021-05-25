@@ -53,6 +53,7 @@ export const AddIngreButton = styled.button`
 `;
 
 export const IngredientsSearch = styled.input`
+    display: ${showFlag} ? block: none;
     position: absolute;
     top: 50px;
     border-radius: 5px;

@@ -51,12 +51,3 @@ export const AddIngreButton = styled.button`
         cursor: pointer;
     }
 `;
-
-export const IngredientsSearch = styled.input`
-    position: absolute;
-    top: 50px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    height: 20px;
-    padding: 0 10px;
-`;

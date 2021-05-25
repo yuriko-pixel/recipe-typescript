@@ -53,8 +53,6 @@ export const getRecipeById = async (id: number): Promise<DetailRecipe[]> => {
     }))
 }
 
-
-
 const RandomRecipe = () => {
     const [recipe, setRecipes] = useState<Recipe[]>([]);
     useEffect(() => {
